@@ -1,0 +1,60 @@
+<template>
+    
+<!--  DECELATIVE APPROCH 
+    
+<lightning-card title="Student Info">
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12">
+            <lightning-input data-id="StudentName" label="Add Student Name" value={newStudent.StudentName} onchange={handleInputChange}></lightning-input>
+            <lightning-input data-id="Class" label="Add Student Class" value={newStudent.Class} onchange={handleInputChange}></lightning-input>
+            <lightning-input data-id="DOB" label="Add Student DOB" value={newStudent.DOB} onchange={handleInputChange}></lightning-input>
+            <lightning-input data-id="Father" label="Add Student Father Name" value={newStudent.Father} onchange={handleInputChange}></lightning-input>
+
+            <lightning-button label="Add Student" onclick={handleClick} class="slds-m-top_medium"></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item size="8">
+            <ul>
+                    <template for:each={StudentArryOFPrent} for:item="student">
+                        <li key={student.StudentName}>
+                            <c-student-info-child student-info-parent={student} ontitleclick={titleSelectHandler}></c-student-info-child>
+
+                        </li>
+
+
+                    </template>
+            </ul>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="4">
+            You have Select : {selectedStudentInfo} 
+        </lightning-layout-item>
+
+
+
+
+
+    </lightning-layout>
+</lightning-card>-->
+            <!--PROGRAMTIVE APPROCH -->
+    <lightning-card title="Student Info">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                    <ul>
+                            <template for:each={StudentArryOFPrent} for:item="student">
+                                <li key={student.StudentName}>
+                                    <c-student-info-child student-info-parent={student} ></c-student-info-child>
+                                </li>
+                            </template>
+                    </ul>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                     You have Select : {selectedStudentInfo} 
+            </lightning-layout-item>
+
+        </lightning-layout> 
+    </lightning-card>
+
+
+
+
+</template>

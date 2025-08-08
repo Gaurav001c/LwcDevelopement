@@ -1,0 +1,17 @@
+<template>
+   <lightning-card title="Student Info Form Child">
+        <div onclick={titleclickHandler} class="slds-p-around_medium lgc-bg">
+            <lightning-tile label={studentInfoParent.StudentName}>
+                <p class="slds-truncate" title={studentInfoParent.Class}>
+                   Student class :  {studentInfoParent.Class}
+                </p>
+                <p class="slds-truncate" title={studentInfoParent.DOB}>
+                  Student DOB :   {studentInfoParent.DOB}
+                </p>
+                <p class="slds-truncate" title={studentInfoParent.Father}>
+                  Student Father Name :   {studentInfoParent.Father}
+                </p>
+            </lightning-tile>
+        </div>
+    </lightning-card>
+</template> 

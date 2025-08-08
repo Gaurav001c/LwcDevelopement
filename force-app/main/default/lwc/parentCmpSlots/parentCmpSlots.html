@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Student Info">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                    <ul>
+                            <template for:each={StudentArryOFPrent} for:item="student">
+                                <li key={student.StudentName}>
+                                      <c-student-info-child student-info-parent={student} >
+                                           <lightning-tile label={student.StudentName} slot="studentInfo">
+                                                <p class="slds-truncate" title={student.Class}>
+                                                Student class :  {student.Class}
+                                                </p>
+                                                <p class="slds-truncate" title={student.DOB}>
+                                                Student DOB :   {student.DOB}
+                                                </p>
+                                                <p class="slds-truncate" title={student.Father}>
+                                                Student Father Name :   {student.Father}
+                                                </p>
+                                            </lightning-tile> 
+                                            <div>
+                                                Addtional Markup
+                                            </div>
+                                        </c-student-info-child>
+                                </li>
+                            </template>
+                    </ul>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                     You have Select : {selectedStudentInfo} 
+            </lightning-layout-item>
+
+        </lightning-layout> 
+    </lightning-card>
+</template>
